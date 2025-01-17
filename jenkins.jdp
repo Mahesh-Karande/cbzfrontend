@@ -6,15 +6,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/Mahesh-Karande/cbzfrontend.git'
             }
         }
-        stage('installation'){
-            steps {
-                sh '''sudo apt update
-sudo apt install nodejs npm
-node -v
-npm -v
-sudo npm install -g @angular/cli@14.2.1'''
-            }
-        }
+        
         stage('build'){
             steps {
                 sh '''npm install
