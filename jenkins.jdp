@@ -10,7 +10,7 @@ pipeline {
         stage('build'){
             steps {
                 sh '''npm install
-                    ng build '''
+                npm run ng build'''
             }
         }
         stage('deploy'){
